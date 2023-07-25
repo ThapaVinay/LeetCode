@@ -7,7 +7,6 @@ public:
         int mid = (start + end)/2;
         while(mid >= 0)
         {
-            cout << mid <<endl;
             if(arr[mid] > arr[mid-1] && arr[mid] > arr[mid+1])
             {
                 return mid;
