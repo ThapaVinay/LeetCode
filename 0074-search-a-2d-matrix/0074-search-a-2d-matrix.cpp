@@ -1,10 +1,6 @@
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        // use binary search
-        // count total elements and find the mid value
-        // how to assign x & y using mid value ?
-        // 6/4 = 1 , 6 % 4 = 2
         
         int m = matrix.size();
         int n = matrix[0].size();
