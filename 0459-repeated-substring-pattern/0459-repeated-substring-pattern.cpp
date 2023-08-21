@@ -6,6 +6,12 @@ public:
         
         for(int i=1; i<n; i++)
         {
+            
+            if(n%i != 0)
+            {
+                continue;
+            }
+            
             string temp = s.substr(0,i);
             
             int times = n/temp.size();
