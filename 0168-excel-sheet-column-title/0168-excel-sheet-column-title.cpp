@@ -5,9 +5,13 @@ public:
         string s = "";
         while(columnNumber > 0)
         {
-            columnNumber--;
             int a = columnNumber % 26;
-            s += (char)(a+65);
+            
+            if(a == 0)
+                a = 26;
+            s += (char)(a+64);
+            
+            columnNumber -= a;
             columnNumber  = columnNumber/26;
             
         }
