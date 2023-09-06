@@ -29,7 +29,6 @@ public:
         vector <ListNode*> res;
         head = temp;
         
-        cout << q << " " << r << endl;
         while(head != NULL)
         {
             res.push_back(head);
