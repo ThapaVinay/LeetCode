@@ -3,7 +3,7 @@ public:
     int nthUglyNumber(int n) {
         if (n <= 0) return 0;
 
-        priority_queue<long long, vector<long long>, greater<long long>> pq;
+        priority_queue<long , vector<long >, greater<long >> pq;
         unordered_set<long long> seen;
         vector<int> primes = {2, 3, 5};
         
