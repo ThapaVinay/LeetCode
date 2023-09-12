@@ -5,7 +5,7 @@ public:
         // then make another map and compare them
         
         unordered_map <char, int> mp1;
-        vector <int> check;
+        set <int> check;
         
         for(auto ch: s)
         {
@@ -22,7 +22,7 @@ public:
                 count ++;
             }
             if(a != 0)
-                check.push_back(a);
+                check.insert(a);
         }
         
         return count;
