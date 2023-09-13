@@ -12,12 +12,6 @@ public:
             }
         }
         
-        for(auto i : res)
-        {
-            cout << i << " ";
-        }
-        cout << endl;
-        
         for(int i=ratings.size()-2; i>=0; i--)
         {
             if(ratings[i] > ratings[i+1])
@@ -29,10 +23,8 @@ public:
         int total = 0;
         for(auto i : res)
         {
-            cout << i << " ";
             total += i;
         }
-        cout << endl;
         return total;
     }
 };
