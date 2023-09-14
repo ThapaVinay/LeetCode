@@ -36,7 +36,11 @@ public:
         for(auto vec : tickets)
         {
             mp[vec[0]].push_back(vec[1]);
-            sort(mp[vec[0]].begin(), mp[vec[0]].end(), greater<string>());
+        }
+        
+        for(auto &pair : mp)
+        {
+            sort(pair.second.begin(), pair.second.end(), greater<string>());
         }
 
         res.push_back("JFK");
