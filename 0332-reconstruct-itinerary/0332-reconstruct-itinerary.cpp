@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool found = false;
-    void dfs(map<string, vector<string>> &mp, string check,int s, vector <string> &res)
+    void dfs(unordered_map<string, vector<string>> &mp, string check,int s, vector <string> &res)
     {
         if(found)
             return;
@@ -33,7 +33,7 @@ public:
     
     vector<string> findItinerary(vector<vector<string>>& tickets) {
         
-        map <string, vector<string>> mp;
+        unordered_map <string, vector<string>> mp;
         vector <string> res;
         
         for(auto vec : tickets)
