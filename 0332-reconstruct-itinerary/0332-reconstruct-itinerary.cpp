@@ -3,6 +3,9 @@ public:
     bool found = false;
     void dfs(map<string, vector<string>> &mp, string check,int s, vector <string> &res)
     {
+        if(found)
+            return;
+        
         if(res.size() == s)
         {
             found = true;
