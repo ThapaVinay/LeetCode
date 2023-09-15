@@ -2,13 +2,11 @@ class RecentCounter {
 public:
     vector <int> res;
     RecentCounter() {
-    
     }
     
     int ping(int t) { 
         res.push_back(t);
         int s = t - 3000;
-        
         int count = 0;
         for(int i=0; i<res.size(); i++)
         {
