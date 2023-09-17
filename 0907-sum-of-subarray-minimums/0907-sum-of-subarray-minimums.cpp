@@ -7,7 +7,7 @@ public:
         
         int n = arr.size();
         
-        vector <int> left(n, -1), right(n,n);
+        vector <int> left(n), right(n);
         
         // to check left
         stack <int> s;
@@ -17,19 +17,34 @@ public:
             {
                 s.pop();
             }
-            left[i] = (s.empty()) ? -1 : s.top();
+            
+            if(s.size())
+            {
+                left[i] = s.top();
+            }
+            else{
+                left[i] = -1;
+            }
             s.push(i);
         }
-        while (!s.empty()) {
-                s.pop();
-            }
-
+        
+        while(!s.empty())
+            s.pop();
+        
         // Calculate the "right" array
-        for (int i = n - 1; i >= 0; --i) {
-            while (!s.empty() && arr[i] <= arr[s.top()]) {
+        for (int i = n - 1; i >= 0; --i)
+        {
+            while (!s.empty() && arr[i] <= arr[s.top()]) 
+            {
                 s.pop();
             }
-            right[i] = (s.empty()) ? n : s.top();
+            if(s.size())
+            {
+                right[i] = s.top();
+            }
+            else{
+                right[i] = n;
+            }
             s.push(i);
         }
         
@@ -37,7 +52,8 @@ public:
         long long ans = 0;
 
         // Calculate the sum of minimums for each element in the array
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < n; ++i) 
+        {
             ans += (long long)(i - left[i]) * (right[i] - i) * arr[i];
             ans %= MOD;
         }
