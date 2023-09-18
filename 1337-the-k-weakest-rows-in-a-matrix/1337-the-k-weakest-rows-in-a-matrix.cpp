@@ -9,7 +9,6 @@ public:
             int start = 0;
             int end = mat[0].size();
             int mid = -1;
-
             while(start < end && mat[i][0] != 0)
             {
                 mid = (start+end)/2;
@@ -33,17 +32,6 @@ public:
             else{
                 mp[mid+1].push_back(i);
             }
-        }
-        
-        
-        for(auto i: mp)
-        {
-            cout << i.first << "->";
-            for(auto j: i.second)
-            {
-                cout << j << " ";
-            }
-            cout << endl;
         }
         
         vector <int> res;
