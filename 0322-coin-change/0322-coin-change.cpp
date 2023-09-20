@@ -34,6 +34,8 @@ public:
         if(amount == 0)
             return 0;
         
+        sort(coins.begin(), coins.end());
+        
         vector <vector<int>> dp(coins.size(), vector<int>(amount+1, -1));
         
         int res = coinDP(coins, amount,0, amount, dp);
