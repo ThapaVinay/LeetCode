@@ -11,7 +11,7 @@ public:
             
             maxi = max(local, maxi);
             
-            if(local <= 0){
+            if(local < 0){
                 local = 0;
             }
         }
