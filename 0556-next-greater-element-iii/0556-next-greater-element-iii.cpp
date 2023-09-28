@@ -1,9 +1,6 @@
 class Solution {
 public:
     int nextGreaterElement(int n) {
-        // check from last if we have a integer greater than that in the right side
-        // if there is then just swap and sort the array after that index
-        
         string s = to_string(n);
         
         int size = s.size();
