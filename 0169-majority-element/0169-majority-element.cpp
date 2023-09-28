@@ -2,31 +2,26 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         
-        if(nums.size() == 1)
-            return nums[0];
+        int element = 0;
+        int count = 0;
         
-        sort(begin(nums), end(nums));
-        
-        int count = 1;
-        int majority = nums.size()/2;
-        int prev = nums[0];
-        
-        for(int i=1; i<nums.size(); i++)
+        for(int i=0; i<nums.size(); i++)
         {
-            if(prev == nums[i])
+            if(count == 0)
+            {
+                element = nums[i];
+                count  = 1;
+            }
+            else if(element == nums[i])
             {
                 count ++;
             }
             else{
-                prev = nums[i];
-                count = 1;
+                count --;
             }
-            
-            if(count > majority)
-                return nums[i];
         }
         
-        return count;
+        return element;
         
     }
 };
