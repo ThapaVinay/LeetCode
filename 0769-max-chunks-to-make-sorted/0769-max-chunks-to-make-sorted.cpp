@@ -9,11 +9,8 @@ public:
         {
             maxi = max(maxi, arr[i]);
             if(maxi == i)
-            {
                 count ++;
-            }
         }
-        
         return count;
     }
 };
