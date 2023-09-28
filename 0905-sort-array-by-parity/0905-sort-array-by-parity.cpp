@@ -8,7 +8,7 @@ public:
     
     vector<int> sortArrayByParity(vector<int>& nums) {
         
-        sort(nums.begin(), nums.end(), comparator);
+        sort(begin(nums), end(nums), comparator);
         
         return nums;
     }
