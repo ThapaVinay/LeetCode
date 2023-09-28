@@ -2,7 +2,6 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
         
-        // if(nums.size() == )
         
         sort(begin(nums), end(nums));
         vector <int> res;
