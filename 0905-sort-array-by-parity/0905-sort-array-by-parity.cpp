@@ -6,19 +6,14 @@ public:
         
         while(l<r)
         {
-            if(nums[l] % 2 == 0 && nums[r] % 2 != 0)
-            {
+            while (l < r && nums[l] % 2 == 0) {
                 l++;
+            }
+            while (l < r && nums[r] % 2 != 0) {
                 r--;
             }
             
-            else if(nums[r] % 2 != 0)
-                r--;
-            
-            else if(nums[l] % 2 == 0)
-                l++;
-            
-            else {
+            if(l<r){
                 int temp = nums[l];
                 nums[l] = nums[r];
                 nums[r] = temp;
