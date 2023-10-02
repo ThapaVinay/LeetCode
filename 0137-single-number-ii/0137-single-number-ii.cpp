@@ -1,20 +1,42 @@
 class Solution {
 public:
+    
+    bool checkBit(int n, int i)
+    {
+        n = n >> i;
+        if(n % 2 == 0)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+        
+    }
+    
     int singleNumber(vector<int>& nums) {
         
-        unordered_map <int, int> mp;
+        int res = 0;
         
-        for(int i=0; i<nums.size(); i++)
+        // iterate for every bit
+        for(int i=0; i<32; i++)
         {
-            mp[nums[i]] ++;
+            int count = 0;
+            
+            // count no. of ones and zeroes at each bit
+            for(int j=0; j<nums.size(); j++)
+            {
+                // counting ones
+                if(checkBit(nums[j], i) == true)
+                    count ++;
+            }
+            
+            if(count % 3 != 0)
+                res = res + (1 << i);
         }
         
-        for(auto pair: mp)
-        {
-            if(pair.second == 1)
-                return pair.first;
-        }
+        return res;
         
-        return -1;
     }
+    
 };
