@@ -2,8 +2,6 @@ class Solution {
 public:
     bool winnerOfGame(string colors) {
         
-        // count consecutive A's and find total possible moves
-        
         int count_a = 0, count_b = 0;
         char curr_ch;
         
