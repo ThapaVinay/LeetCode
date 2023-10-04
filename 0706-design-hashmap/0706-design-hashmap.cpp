@@ -1,23 +1,21 @@
 class MyHashMap {
 public:
     
-    int arr[1000001];
+    int arr[1000001] = {0};
     
     MyHashMap() {
-        for(int i=0; i<1000001; i++)
-            arr[i] = -1;
     }
     
     void put(int key, int value) {
-        arr[key] = value;
+        arr[key] = value+1;
     }
     
     int get(int key) {
-        return arr[key];
+        return arr[key] - 1;
     }
     
     void remove(int key) {
-        arr[key] = -1;
+        arr[key] = 0;
     }
 };
 
