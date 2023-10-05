@@ -3,7 +3,7 @@ public:
     int leastBricks(vector<vector<int>>& wall) {
         
         unordered_map <int, int> mp;
-        int maxi = -1;
+        int maxi = 0;
         
         for(auto arr: wall)
         {
@@ -16,9 +16,6 @@ public:
                 maxi = max(maxi, mp[count]);
             }
         }
-        
-        if(maxi == -1)
-            return wall.size();
         
         return wall.size() - maxi;
         
