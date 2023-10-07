@@ -38,8 +38,6 @@ public:
     
     int numOfArrays(int n, int m, int k) {
         
-        if(k > m) return 0;
-        
         vector<vector<vector<int>>> dp(n+1,vector<vector<int>>(m+1, vector<int>(k+1,-1)));
         
         return solveDP(n, m, 0, k, dp);
