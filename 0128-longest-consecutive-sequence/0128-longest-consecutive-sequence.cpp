@@ -5,28 +5,29 @@ public:
         if(nums.size() == 0)
             return 0;
         
-        sort(nums.begin(), nums.end());
+        unordered_set <int> st;
         
-        int maxi = 1;
-        int curr = 1;
-        
-        for(int i=0; i<nums.size()-1; i++)
+        for(int i=0; i<nums.size(); i++)
         {
-            if(nums[i] == nums[i+1])
-                continue;
-            
-            if(nums[i] == nums[i+1] - 1)
-            {
-                curr ++;
-            }
-            else{
-                maxi = max(curr, maxi);
-                curr = 1;
-            }
-            
+            st.insert(nums[i]);
         }
         
-        maxi = max(curr, maxi);
+        int maxi = 1;
+        for(int i=0; i<nums.size(); i++)
+        {
+            int curr = 1;
+            int n = nums[i];
+            
+            if(st.find(n-1) == st.end())
+            {
+                while(st.find(++n) != st.end())
+                {
+                    curr ++;
+                }
+            }
+            
+            maxi = max(curr, maxi);
+        }
         
         return maxi;
     }
