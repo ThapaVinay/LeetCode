@@ -7,16 +7,15 @@ public:
         
         unordered_set <int> st;
         
-        for(int i=0; i<nums.size(); i++)
+        for(auto n :nums)
         {
-            st.insert(nums[i]);
+            st.insert(n);
         }
         
         int maxi = 1;
-        for(int i=0; i<nums.size(); i++)
+        for(auto n: st)
         {
             int curr = 1;
-            int n = nums[i];
             
             if(st.find(n-1) == st.end())
             {
