@@ -52,12 +52,6 @@ public:
         find_next_smaller(h, next_smaller, n);
         find_prev_smaller(h, prev_smaller, n);
         
-        
-        for(auto i: next_smaller)
-        {
-            cout << i << " ";
-        }
-        
         // find area
         int maxi = INT_MIN;
         for(int i=0; i<n; i++)
@@ -72,8 +66,6 @@ public:
         }
         
         return maxi;
-        
-        
-        
+  
     }
 };
