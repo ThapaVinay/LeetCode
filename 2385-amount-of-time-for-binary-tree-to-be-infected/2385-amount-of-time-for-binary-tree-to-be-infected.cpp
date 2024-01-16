@@ -35,16 +35,6 @@ public:
         
         traverse(root, 0);
         
-        // for(auto pair: mp)
-        // {
-        //     cout << pair.first << " => ";
-        //     for(auto i: pair.second)
-        //     {
-        //         cout << i << " , ";
-        //     }
-        //     cout << endl;
-        // }
-        
         queue <int> q;
         q.push(start);
         
@@ -52,11 +42,11 @@ public:
         visited.insert(start);
         
         int count = -1;
-        // cout << "#" << endl;
+
         while(!q.empty())
         {
             int size = q.size();
-            // cout << size << endl;
+       
             while(size > 0)
             {
                 int front = q.front();
