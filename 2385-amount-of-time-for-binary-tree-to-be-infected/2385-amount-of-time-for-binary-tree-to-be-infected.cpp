@@ -54,7 +54,7 @@ public:
                 
                 for(auto x: mp[front])
                 {
-                    if(!visited.contains(x))
+                    if(visited.find(x) == visited.end())
                     {
                         q.push(x);
                         visited.insert(x);
