@@ -50,8 +50,6 @@ public:
         
         int peak = find_peak(nums);
         
-        cout << peak << endl;
-        
         int a = binary_search(nums, 0, peak, target);
         int b = binary_search(nums, peak+1, nums.size()-1, target);
         
