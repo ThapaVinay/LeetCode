@@ -21,7 +21,7 @@ public:
         return start;
     }
     
-    int binary_search(vector <int> nums, int start, int end, int target)
+    int binary_search(vector <int> &nums, int start, int end, int target)
     {
         while(start <= end)
         {
