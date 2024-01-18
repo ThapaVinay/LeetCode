@@ -7,7 +7,7 @@ public:
             return 1;
 
         
-        if(n<0)
+        if(n < 0)
             return 0;
         
         if(dp[n] != -1)
