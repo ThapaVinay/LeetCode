@@ -1,7 +1,6 @@
 class Solution {
 public:
     
-    
     int recurDP(vector<vector<int>>& matrix, int i, int j, vector<vector<int>> &dp)
     {
         if(i == matrix.size())
@@ -24,6 +23,10 @@ public:
     }
     
     int minFallingPathSum(vector<vector<int>>& matrix) {
+        
+        ios_base::sync_with_stdio(false);
+        std::cin.tie(nullptr);
+        std::cout.tie(NULL);
         
         vector<vector<int>> dp (matrix.size()+1, vector<int>(matrix.size()+1, INT_MAX));
         
