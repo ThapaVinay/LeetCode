@@ -1,47 +1,60 @@
 class Solution {
 public:
+    
+    bool equal(int a[], int b[])
+    {
+        for(int i=0; i<26; i++)
+        {
+            if(a[i] != b[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    
     bool checkInclusion(string s1, string s2) {
         
-        // just store all the characters of the string s1 in map and 
-        // then check for them in s2
+        // just store all the characters of the string s1 in array and using sliding window
         
-        if(s2.length() < s1.length())
-            return false;
-        
-        unordered_map <char, int> mp, temp;
-        
-        for(auto ch: s1)
+        if(s2.size() < s1.size())
         {
-            mp[ch] ++;
+            return false;
         }
         
+        int a[26] = {0}, b[26] = {0};
         
-        int words = s1.length();
-        
-        for(int i=0; i <= s2.length() - words; i++)
+        for(int i=0; i<s1.size(); i++)
         {
+            char ch = s1[i];
+            a[ch-'a'] ++;
+        }
+        
+        // make the window
+        int i = 0, j = 0;
+        while(i < s1.size())
+        {
+            char ch = s2[i++];
+            b[ch-'a'] ++;
+        }
+        
+        // check if equal
+        if(equal(a,b))
+        {
+            return true;
+        }
+        
+        // now go for the next windows
+        while(i < s2.size())
+        {
+            char ch1 = s2[j++];
+            char ch2 = s2[i++];
             
-            for(auto pair: mp)
-            {
-                temp[pair.first] = pair.second;
-            }
+            b[ch1-'a'] --;
+            b[ch2-'a'] ++;
             
-            int count = 0;
-            for(int j=i; j<s2.length(); j++)
-            {
-                char ch = s2[j];
-                
-                if(temp[ch])
-                {
-                    count ++;
-                    temp[ch] --;
-                }
-                else{
-                    break;
-                }
-            }
-            
-            if(count == words)
+            if(equal(a,b))
             {
                 return true;
             }
