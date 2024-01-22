@@ -1,40 +1,6 @@
 class Solution {
 public:
-    
-    bool recurDP(string &s, int mini, int maxi, int i, vector <int> &dp)
-    {
-        if(i == s.size()-1)
-        {
-            return true;
-        }
-        
-        if(i >= s.size())
-            return false;
-        
-        cout << dp[i] << endl;
-        
-        if(dp[i] != -1)
-            return dp[i];
-        
-        // options 
-        int start = i + mini;
-        int end = min(i+maxi, static_cast<int>(s.size()-1));
-        
-        bool flag = false;
-        while(start <= end)
-        {
-            if(s[start] == '0')
-            {
-                flag = flag || recurDP(s, mini, maxi, start, dp);
-            }
-            
-            start ++;
-        }
-        
-        return dp[i] = flag == true ? 1 : 0;
-        
-    }
-    
+
     bool recurTab(string s, int mini, int maxi)
     {
         vector <bool> dp(s.size()+1, false);
@@ -71,9 +37,6 @@ public:
         
         // at each index we will have option between i+minJump to i+maxJump
         
-        // vector <int> dp(s.size()+1, -1);
-        
-        // return recurDP(s, minJump, maxJump, 0, dp);
         return recurTab(s, minJump, maxJump);
         
     }
