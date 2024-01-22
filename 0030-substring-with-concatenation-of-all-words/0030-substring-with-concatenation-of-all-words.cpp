@@ -2,6 +2,10 @@ class Solution {
 public:
     vector<int> findSubstring(string s, vector<string>& words) {
         
+        ios_base::sync_with_stdio(false);
+        std::cin.tie(nullptr);
+        std::cout.tie(NULL);
+        
         // first save the words in a map
         // then at each character in s check if the word is present in the map
         
