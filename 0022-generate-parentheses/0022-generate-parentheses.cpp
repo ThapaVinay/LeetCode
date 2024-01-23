@@ -42,6 +42,7 @@ public:
         recur(n, s);
         s.pop_back();
         
+        // adding ')'
         if(s.size() != 0) 
         {
             s.push_back(')');
