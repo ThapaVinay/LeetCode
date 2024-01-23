@@ -16,15 +16,13 @@ public:
         return true;
     }
     
-    int recurDP(vector<string> &arr, string &s, int i, unordered_map <string, int> &mp) 
+    int recurDP(vector<string> &arr, string &s, int i) 
     {
         if(i >= arr.size())
         {
             return s.size();
         }
         
-        if(mp[s])
-            return mp[s];
         
         // take 
         int take = 0, not_take = 0;
@@ -32,24 +30,25 @@ public:
         if(check(temp))
         {
             s += arr[i];
-            take = recurDP(arr, s, i+1, mp);
+            take = recurDP(arr, s, i+1);
             s = s.substr(0, s.size() - arr[i].size());
-            not_take = recurDP(arr, s, i+1, mp);
+            not_take = recurDP(arr, s, i+1);
         }
         else{
             // not take
-            not_take = recurDP(arr, s, i+1, mp);
+            not_take = recurDP(arr, s, i+1);
         }
         
-        return mp[s] = max(take, not_take);
+        return max(take, not_take);
         
     }            
     
     int maxLength(vector<string>& arr) {
         
         string temp = "";
-        unordered_map <string, int> mp;
         
-        return recurDP(arr, temp, 0, mp);
+        // vector <vector<int>> dp(20, vector<int>(500, -1));
+        
+        return recurDP(arr, temp, 0);
     }
 };
