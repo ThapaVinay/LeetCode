@@ -2,6 +2,8 @@ class Solution {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
         
+        // just check the difference of gas and cost at each index and keep increasing the starting point till it is less than 0.
+        
         int total_gas =0;
         int total_cost = 0;
         
