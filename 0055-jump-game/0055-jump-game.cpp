@@ -30,17 +30,17 @@ public:
         
         dp[nums.size()-1] = true;
         
+        int n = nums.size() -1;
+        
         for(int i=nums.size()-2; i>=0; i--)
         {
-            bool flag = false;
-            for(int j=1; j<=nums[i] && i+j < nums.size(); j++)
+            int temp = nums[i];
+            if(temp + i >= n)
             {
-                flag = flag || dp[i+j];
+                n = i;
             }
-            dp[i] = flag;
         }
-        
-        return dp[0]; 
+        return n == 0;
     }
     
     bool canJump(vector<int>& nums) {
