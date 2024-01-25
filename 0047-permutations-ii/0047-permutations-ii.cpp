@@ -10,8 +10,7 @@ public:
             if(res.count(temp))
                 return;
             
-            res.insert(temp);
-            
+            res.insert(temp); 
             return;
         }
         
