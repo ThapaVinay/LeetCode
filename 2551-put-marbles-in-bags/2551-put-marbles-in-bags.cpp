@@ -18,8 +18,9 @@ public:
         
         int i = 0, j = arr.size()-1;
         
+        k--;
         long long max_score = 0, min_score = 0;
-        k = k-1;
+        
         
         while(k--)
         {
@@ -28,6 +29,5 @@ public:
         }
         
         return max_score - min_score;
-        
     }
 };
