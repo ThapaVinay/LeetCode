@@ -30,6 +30,21 @@ public:
         
         dp[nums.size()-1] = true;
         
+        for(int i=nums.size()-2; i>=0; i--)
+        {
+            bool flag = false;
+            for(int j=1; j<=nums[i] && i+j < nums.size(); j++)
+            {
+                flag = flag || dp[i+j];
+            }
+            dp[i] = flag;
+        }
+        
+        return dp[0]; 
+    }
+    
+    bool greedy(vector <int> &nums)
+    {
         int n = nums.size() -1;
         
         for(int i=nums.size()-2; i>=0; i--)
@@ -48,7 +63,9 @@ public:
         // vector <int> dp(nums.size(), -1);
         // return recurDP(nums, 0, dp);
         
-        return recurTab(nums);
+        // return recurTab(nums);
+        
+        return greedy(nums);
         
     }
 };
