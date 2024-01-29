@@ -3,7 +3,7 @@ public:
     int numberOfBoomerangs(vector<vector<int>>& points) {
         int n = points.size();
         
-
+        // use the concept of kadane 
         int count = 0;
         for(int i=0; i<n; i++)
         {
@@ -23,20 +23,6 @@ public:
                     count += mp[val];
                 }
                 mp[val] += 2;
-                
-//                 for(int k=0; k<n; k++)
-//                 {
-//                     if(k == j || k == i)
-//                         continue;
-                    
-//                     int x2 = points[i][0] - points[k][0];
-//                     int y2 = points[i][1] - points[k][1]; 
-                    
-//                     if( == pow(x2, 2) + pow(y2, 2))
-//                     {
-//                         count ++;
-//                     }     
-//                 }
             }
         }
         
