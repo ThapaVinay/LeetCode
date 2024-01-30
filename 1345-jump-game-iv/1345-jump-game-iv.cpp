@@ -4,6 +4,7 @@ public:
     int minJumps(vector<int>& arr) {
         // first save the elements with their occurances in a map to make graph
         // then use bfs to iterate using queue
+        // you will have three options : curr + 1, curr - 1 or next == curr
         
         unordered_map <int, vector<int>> mp;
         
