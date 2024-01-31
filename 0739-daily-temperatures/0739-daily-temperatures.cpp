@@ -2,6 +2,8 @@ class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& t) {
         
+        // use monotonicly decreasing stack from end to find the next max
+        
         stack <int> st;
         int n = t.size();
         st.push(-1);
@@ -9,7 +11,6 @@ public:
     
         for(int i=n-1; i>=0; i--)
         {
-
             while(st.top() != -1 && t[st.top()] <= t[i])
             {
                 st.pop();
