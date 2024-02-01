@@ -67,7 +67,6 @@ public:
         
         if(i == n) return true;
         
-        cout << i;
         
         return false;
     }
