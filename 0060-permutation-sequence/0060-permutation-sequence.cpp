@@ -1,9 +1,9 @@
 class Solution {
 public:
     
-    void permuteRec(vector <int> &nums, vector<vector<int>> &ans, vector <int> &curr, int k)
+    void permuteRec(int n, vector<vector<int>> &ans, vector <int> &curr, int k)
     {
-        if(curr.size() == nums.size())
+        if(curr.size() == n)
         {
             ans.push_back(curr);
             return;
@@ -12,12 +12,12 @@ public:
         if(ans.size() == k)
             return;
         
-        for(int n : nums)
+        for(int i=1; i<=n; i++)
         {
-            if(find(curr.begin(), curr.end(), n) == curr.end())
+            if(find(curr.begin(), curr.end(), i) == curr.end())
             {
-                curr.push_back(n);
-                permuteRec(nums, ans, curr, k);
+                curr.push_back(i);
+                permuteRec(n, ans, curr, k);
                 curr.pop_back();
             }
         }
@@ -28,14 +28,8 @@ public:
     {
         vector <vector<int>> ans;
         vector <int> curr;
-        vector <int> nums;
         
-        for(int i=0; i<n; i++)
-        {
-            nums.push_back(i+1);
-        }
-        
-        permuteRec(nums,ans, curr, k);
+        permuteRec(n, ans, curr, k);
         
         string s = "";
         for(auto ch: ans[k-1])
