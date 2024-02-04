@@ -3,7 +3,6 @@ public:
     
     bool recur(vector<vector<char>>& board, string &word, int i, int j, vector<vector<bool>> & visited, int k)
     {
-        
         if(k == word.size())
             return true;
         
