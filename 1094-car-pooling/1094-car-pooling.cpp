@@ -1,11 +1,6 @@
 class Solution {
 public:
     
-    bool compare(const vector<int>& a, const vector<int>& b) 
-    {
-        return a[1] < b[1];
-    }
-    
     bool carPooling(vector<vector<int>>& trips, int capacity) {
         
         // put the start time and the end time of the trips in a map and
@@ -41,7 +36,6 @@ public:
                 if(capacity < 0)
                     return false;
             }
-            
             first ++;
         }
         
