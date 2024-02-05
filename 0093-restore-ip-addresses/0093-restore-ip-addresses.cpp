@@ -22,8 +22,6 @@ public:
         if(temp.size() >= 4)
             return;
         
-        // we can either select one, two or three characters
-        
         // one character
         temp.push_back(s.substr(i, 1));
         recur(s, res, temp, i+1);
@@ -53,13 +51,13 @@ public:
         
     vector<string> restoreIpAddresses(string s) {
         
+         // we can either select one, two or three characters
+        
         int n = s.size();
-
         vector<string> res;
         vector<string> temp;
         
         recur(s, res, temp, 0);
-        
         return res;
     }
 };
