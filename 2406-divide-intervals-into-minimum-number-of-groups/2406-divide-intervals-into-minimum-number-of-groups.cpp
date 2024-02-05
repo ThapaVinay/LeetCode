@@ -19,8 +19,6 @@ public:
             int x = intervals[i][0];
             int y = intervals[i][1];
             
-            // cout << x << " " << y << endl;
-            
             left[x] ++;
             right[y] ++;
             
@@ -45,8 +43,7 @@ public:
                 curr -= right[mini];
             
             mini ++;
-        }
-        
+        } 
         return res;
     }
 };
