@@ -2,6 +2,7 @@ class Solution {
 public:
     int firstUniqChar(string s) {
         
+        int n = s.size();
         int arr[26] = {0};
         
         for(auto ch: s)
@@ -9,7 +10,7 @@ public:
             arr[ch - 'a'] ++;
         }
         
-        for(int i=0; i<s.size(); i++)
+        for(int i=0; i<n; i++)
         {
             char ch = s[i];
             if(arr[ch-'a'] == 1)
