@@ -5,7 +5,7 @@ public:
         // store the counts in array and sort and then add in keypad
         
         vector <int> arr(26, 0);
-        for(auto ch: word)
+        for(auto &ch: word)
         {
             arr[ch-'a'] ++;
         }
