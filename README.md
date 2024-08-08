@@ -25,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0921-spiral-matrix-iii](https://github.com/ThapaVinay/LeetCode/tree/master/0921-spiral-matrix-iii) |
 | [2255-minimum-swaps-to-group-all-1s-together-ii](https://github.com/ThapaVinay/LeetCode/tree/master/2255-minimum-swaps-to-group-all-1s-together-ii) |
 ## Sliding Window
 |  |
@@ -38,4 +39,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0273-integer-to-english-words](https://github.com/ThapaVinay/LeetCode/tree/master/0273-integer-to-english-words) |
+## Matrix
+|  |
+| ------- |
+| [0921-spiral-matrix-iii](https://github.com/ThapaVinay/LeetCode/tree/master/0921-spiral-matrix-iii) |
+## Simulation
+|  |
+| ------- |
+| [0921-spiral-matrix-iii](https://github.com/ThapaVinay/LeetCode/tree/master/0921-spiral-matrix-iii) |
 <!---LeetCode Topics End-->
