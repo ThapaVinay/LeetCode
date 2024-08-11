@@ -25,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0162-find-peak-element](https://github.com/ThapaVinay/LeetCode/tree/master/0162-find-peak-element) |
 | [0921-spiral-matrix-iii](https://github.com/ThapaVinay/LeetCode/tree/master/0921-spiral-matrix-iii) |
 | [2255-minimum-swaps-to-group-all-1s-together-ii](https://github.com/ThapaVinay/LeetCode/tree/master/2255-minimum-swaps-to-group-all-1s-together-ii) |
 ## Sliding Window
@@ -47,4 +48,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0921-spiral-matrix-iii](https://github.com/ThapaVinay/LeetCode/tree/master/0921-spiral-matrix-iii) |
+## Binary Search
+|  |
+| ------- |
+| [0162-find-peak-element](https://github.com/ThapaVinay/LeetCode/tree/master/0162-find-peak-element) |
 <!---LeetCode Topics End-->
